@@ -257,20 +257,3 @@ Citizen.CreateThread(function()
                          true)
                          
 end)
-
---trailer
-CreateThread(function()
-    Wait(5000)
-    DisplayRadar(false)
-    local minimap = RequestScaleformMovie("minimap")
-    SetRadarBigmapEnabled(true, false)
-    Wait(0)
-    SetRadarBigmapEnabled(false, false)
-    while true do
-        Wait(0)
-        BeginScaleformMovieMethod(minimap, "SETUP_HEALTH_ARMOUR")
-        ScaleformMovieMethodAddParamInt(3)
-        EndScaleformMovieMethod()
-    end
-end)
-
